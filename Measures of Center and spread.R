@@ -1,0 +1,8 @@
+mean(pokedex$attack)
+median(pokedex$attack)
+var(pokedex$attack)
+sd(pokedex$attack)
+mean(pokedex$defense)
+median(pokedex$defense)
+var(pokedex$defense)
+sd(pokedex$defense)
