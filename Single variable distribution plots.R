@@ -1,0 +1,5 @@
+library(readr)
+pokedex <- read_csv("pokedex_(Update_05.20).csv")
+View(pokedex)
+barplot(table(pokedex$generation), main = "Quantity of Pokemon per Generation", xlab = "Generation", ylab = "Quantity")
+barplot(table(pokedex$status), main = "Status of Pokemon", xlab = "Status", ylab = "Frequency")
