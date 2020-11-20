@@ -1,0 +1,15 @@
+library(readr)
+pokedex <- read_csv("Pokemon project/pokedex_(Update_05.20).csv")
+View(pokedex)
+xbar = mean(pokedex$attack)
+s = sd(pokedex$attack)
+n = 1028
+t = -qt(0.025,1027)
+L = xbar-t*s/sqrt(n)
+U = xbar+t*s/sqrt(n)
+xbar2 = mean(pokedex$defense)
+s2 = sd(pokedex$defense)
+n = 1028
+t2 = -qt(0.025,1027)
+L2 = xbar2-t2*s2/sqrt(n)
+U2 = xbar2+t2*s2/sqrt(n)
