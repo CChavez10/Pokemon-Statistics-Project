@@ -1,5 +1,0 @@
-library(readr)
-pokedex <- read_csv("Pokemon project/pokedex_(Update_05.20).csv")
-View(pokedex)
-plot(pokedex$weight_kg, pokedex$height_m, main = "Height vs Weight", xlab = "Weight (kg)", ylab = "Height (meters)")
-cor(pokedex$height_m, pokedex$weight_kg, use = "complete.obs")
