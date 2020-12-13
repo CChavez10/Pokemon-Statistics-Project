@@ -1,0 +1,10 @@
+library(readr)
+pokedex <- read_csv("Pokemon project/pokedex_(Update_05.20).csv")
+View(pokedex)
+pokedex$generation <- as.factor(pokedex$generation)
+boxplot(pokedex$total_points ~ pokedex$generation, horizontal = TRUE, main = "Total Points per Generation", xlab = "Total  Points", ylab = "Generation")
+poke_aov = aov(total_points ~ generation, data = pokedex)
+summary(poke_aov)
+posthoc_poke = TukeyHSD(poke_aov)
+posthoc_poke
+plot(posthoc_poke, las = 1)
